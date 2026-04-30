@@ -47,12 +47,13 @@ const Index = () => {
       </motion.div>
       
       <motion.div
-        className="mt-8"
+        className="mt-8 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
       >
         <MadeWithDyad />
+        <p className="text-sm text-gray-500 mt-2">Desenvolvido por Seu Nome</p>
       </motion.div>
     </div>
   );
