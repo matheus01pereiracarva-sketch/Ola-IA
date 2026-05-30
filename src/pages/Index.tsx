@@ -2,6 +2,8 @@
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import { motion } from "framer-motion";
 import { Brain, Lightbulb, Rocket } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const features = [
@@ -81,13 +83,26 @@ const Index = () => {
             <div className="w-3 h-3 bg-white rounded-full"></div>
           </div>
         </motion.div>
+
+        <motion.div
+          className="mt-8 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+        >
+          <Link to="/tarefas">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              Gerenciar Tarefas
+            </Button>
+          </Link>
+        </motion.div>
       </div>
       
       <motion.div
         className="mt-12 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
+        transition={{ delay: 1.2 }}
       >
         <MadeWithDyad />
         <p className="text-sm text-gray-500 mt-2">Desenvolvido por Matheus Carvalho Pereira</p>
